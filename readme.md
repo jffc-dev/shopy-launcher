@@ -1,3 +1,9 @@
+### Dev
+1. Clone repo
+2. Create .env file based on .env.template
+3. Run `docker compose up --build`
+
+
 ### Steps to create Git Submodules
 
 
