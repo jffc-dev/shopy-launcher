@@ -1,14 +1,14 @@
 ### Steps to create Git Submodules
 
 
-1. Crear un nuevo repositorio en GitHub
-2. Clonar el repositorio en la máquina local
-3. Añadir el submodule, donde `repository_url` es la url del repositorio y `directory_name` es el nombre de la carpeta donde quieres que se guarde el sub-módulo (no debe de existir en el proyecto)
+1. Create new GitHub repo
+2. Clone repo locally
+3. Add the submodule, where `repository_url` is the url of the repo and `directory_name` is the name of the folder where the submodule will be stored (it shouldn't exist in the project)
 ```
 git submodule add <repository_url> <directory_name>
 ```
-4. Añadir los cambios al repositorio (git add, git commit, git push)
-Ej:
+4. Add the chages (git add, git commit, git push)
+Ex:
 ```
 git add .
 git commit -m "Add submodule"
