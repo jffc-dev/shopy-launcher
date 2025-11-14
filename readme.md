@@ -1,7 +1,8 @@
 ### Dev
 1. Clone repo
 2. Create .env file based on .env.template
-3. Run `docker compose up --build`
+3. Run `git submodule update --init --recursive`
+4. Run `docker compose up --build`
 
 
 ### Steps to create Git Submodules
@@ -20,17 +21,17 @@ git add .
 git commit -m "Add submodule"
 git push
 ```
-5. Inicializar y actualizar Sub-módulos, cuando alguien clona el repositorio por primera vez, debe de ejecutar el siguiente comando para inicializar y actualizar los sub-módulos
+5. Initialize and update Submodules, When someone clones the repository for the first time, they must run the following command to initialize and update the submodules:
 ```
 git submodule update --init --recursive
 ```
-6. Para actualizar las referencias de los sub-módulos
+6. To update the submodule references
 ```
 git submodule update --remote
 ```
 
 
-## Importante
-Si se trabaja en el repositorio que tiene los sub-módulos, **primero actualizar y hacer push** en el sub-módulo y **después** en el repositorio principal. 
+## Important
+If you are working inside the repository that contains the submodules, you must first update and push in the submodule, and then in the main repository.
 
-Si se hace al revés, se perderán las referencias de los sub-módulos en el repositorio principal y tendremos que resolver conflictos.
+If you do it the other way around, the submodule references in the main repository will be lost, and you’ll have to resolve conflicts.
