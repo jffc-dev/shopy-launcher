@@ -70,3 +70,12 @@ services:
       - NATS_SERVERS=nats://nats-server:4222
     depends_on:
       - orders-db
+
+  auth-ms:
+    build: ./auth-ms
+    volumes:
+      - ./auth-ms/src:/usr/src/app/src
+    command: npm run start:docker
+    environment:
+      - PORT=3001
+      - NATS_SERVERS=nats://nats-server:4222
